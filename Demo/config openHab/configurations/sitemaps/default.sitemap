@@ -1,0 +1,8 @@
+sitemap default label="Smart Home Demo"
+{
+    Frame label="Esp1" {
+        Text item=Temperature  
+		Text item=Water
+		Switch item=Light
+	}
+}

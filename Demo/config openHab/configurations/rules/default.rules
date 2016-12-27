@@ -1,0 +1,21 @@
+import org.openhab.core.library.types.*
+import org.openhab.model.script.actions.*
+
+rule "Temperature up"
+	when
+		Item Temperature received update	
+	then
+		if(Temperature.state>40){
+			sendBroadcastNotification("Nhiet do tang cao, nguy hiem")
+		}		
+end
+
+rule "Water up"
+	when
+		Item Water received update
+	then
+		if(Water.state>0){
+			sendBroadcastNotification("Nuoc tang cao")
+			sendLogNotification("Nuoc tang cao")
+		}
+end

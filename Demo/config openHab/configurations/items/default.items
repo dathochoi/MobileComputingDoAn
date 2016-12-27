@@ -1,0 +1,7 @@
+Group All
+Group Esp1 "Smart Home" <sofa> (All)
+
+//Webberry
+Number Temperature "Temperature [%.1f C]" <temperature> (Web) {mqtt="<[server:/Esp1/Temperature:state:default]"}
+Number Water "Water Status [%.0f]" <water> (Web) {mqtt="<[server:/Esp1/Water:state:default]"}
+Switch Light "Light" (Web) { mqtt="<[server:/Esp1/Light/Status:state:default],>[server:/Esp1/Light/Command:command:ON:1],>[server:/Esp1/Light/Command:command:OFF:0]" }

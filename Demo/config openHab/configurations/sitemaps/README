@@ -1,0 +1,6 @@
+sitemap default label="My Smart Home"
+{
+    Frame label="Living Room" {
+		Text item=Temperature1
+	}
+}
